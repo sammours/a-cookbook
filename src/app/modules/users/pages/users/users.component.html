@@ -1,0 +1,26 @@
+<p>Sync</p>
+
+<ng-container *ngIf="isLoading; else loaded">Loading ...</ng-container>
+
+<ng-template #loaded>
+    <div *ngFor="let item of result">
+        {{ item.username }}
+        <br />
+        {{ item.hasAccess }}
+        <br />
+        {{ item.role }}
+    </div>
+</ng-template>
+
+<!-- <p>Async</p>
+<ng-container *ngIf="(testAsync$ | async) as res">    
+    <div *ngFor="let item of res">
+        {{ item.username }}
+        <br />
+        {{ item.hasAccess }}
+        <br />
+        {{ item.role }}
+    </div>
+</ng-container> -->
+
+<button (click)="addItemToArray()">Here we go</button>

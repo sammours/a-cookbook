@@ -1,0 +1,12 @@
+[
+    {
+        "username": "Annabel",
+        "hasAccess": true,
+        "role": 0
+    },
+    {
+        "username": "Annabel1",
+        "hasAccess": false,
+        "role": 0
+    }
+]

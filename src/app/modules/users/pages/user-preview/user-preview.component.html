@@ -1,0 +1,13 @@
+
+<div>
+    <input type="text" [(ngModel)]="firstname" placeholder="First name" (input)="isDirty = true" />
+</div>
+
+<div>
+    <input type="text" [(ngModel)]="lastname" placeholder="Last name" (input)="isDirty = true" />
+</div>
+
+<div>
+    <button (click)="onSaveClicked()" [disabled]="!isDirty">Save</button>
+</div>
+
