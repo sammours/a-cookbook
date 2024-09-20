@@ -1,1 +1,64 @@
 <p>book-list works!</p>
+
+
+<div class="container">
+  <div class="first-child"></div>
+  <div class="second-child"></div>
+  <div class="third-child"></div>
+</div>
+
+<div class="container1">
+  <div class="first-child"></div>
+  <div class="second-child"></div>
+  <div class="third-child"></div>
+</div>
+
+<!-- <div [formGroup]="formGroup">
+  <label for="isbn">ISBN</label>
+  <input type="text" id="isbn" formControlName="isbn" />
+  <span *ngIf="formGroup.controls.isbn.errors == null">
+      No errors
+  </span>
+  <span *ngIf="formGroup.controls.isbn.errors?.['required']">
+      ISBN is required
+  </span>
+  <span *ngIf="formGroup.controls.isbn.errors?.['isbnNotValid']">
+    ISBN is not valid.
+  </span>
+</div> -->
+
+<div>
+  <label for="id">Id</label>
+  <input type="number" id="id" [(ngModel)]="book.id" (input)="onChange()" />
+  <div style="color: red" *ngIf="!validator.properties['id'].isValid">
+    {{ validator.properties['id'].error }}
+  </div>
+</div>
+
+<div>
+  <label for="title">Title</label>
+  <input type="text" id="title" [(ngModel)]="book.title" (input)="onChange()"/>
+  <div style="color: red" *ngIf="!validator.properties['title'].isValid">
+    {{ validator.properties['title'].error }}
+  </div>
+</div>
+
+<div>
+  <label for="isbn">ISBN</label>
+  <input type="text" id="isbn" [(ngModel)]="book.isbn" (input)="onChange()" />
+  <div style="color: red" *ngIf="!validator.properties['isbn'].isValid">
+    {{ validator.properties['isbn'].error }}
+  </div>
+</div>
+
+<div>
+  Is valid book? {{ validator.isValid }}
+</div>
+
+<div>
+  Errors:
+  <div *ngFor="let error of validator.errors" style="color: red" >
+    {{ error }}
+  </div>
+</div>
+

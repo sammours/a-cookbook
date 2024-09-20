@@ -16,6 +16,8 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title = 'cook-book';
 
+  isDarkMode = false;
+
   protected router = inject(Router);
   protected userService = inject(UserService);
 

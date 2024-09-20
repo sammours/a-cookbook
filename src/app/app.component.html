@@ -1,3 +1,5 @@
+<body [class.dark-mode]="isDarkMode">
+
 <header style="background-color: gray;display: flex; justify-content: space-between;">
     <div>
         Hier ist logo
@@ -21,10 +23,11 @@
 
 <router-outlet></router-outlet>
 
+</body>
 
 <!-- <a [routerLink]="['/search', 'users', id, 'filter']">Google link</a>
 <a [routerLink]="['/search', 'users', id, 'filter']">Google link</a> -->
-<!-- 
+<!--
 google.com/search/users/1/filter?name=annabel
 
 /search/users/:id/filter
@@ -33,7 +36,7 @@ Url Tree
 
     Router segments
         search
-        users        
+        users
             1 // router parameter
         filter
 
